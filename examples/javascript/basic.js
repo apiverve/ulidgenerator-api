@@ -13,13 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/ulidgenerator';
  */
 async function callULIDGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            count: &#x27;5&#x27;,
-            timestamp: &#x27;1609459200000&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
