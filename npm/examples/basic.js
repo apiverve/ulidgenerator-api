@@ -15,8 +15,8 @@ const api = new ulidgeneratorAPI({
 
 // Example query
 var query = {
-  count: "5",
-  timestamp: "1609459200000"
+  count: 1,
+  timestamp: 1609459200000
 };
 
 // Make the API request using callback
