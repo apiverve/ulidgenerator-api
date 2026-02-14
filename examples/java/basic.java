@@ -12,13 +12,8 @@ public class BasicExample {
         ULIDGeneratorAPIClient client = new ULIDGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Query parameters
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;count&quot;, &quot;5&quot;);
-        parameters.put(&quot;timestamp&quot;, &quot;1609459200000&quot;);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
