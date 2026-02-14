@@ -1,40 +1,44 @@
 openapi: 3.0.4
 info:
   title: ULID Generator
-  description: ULID Generator is a tool for generating Universally Unique Lexicographically Sortable Identifiers (ULIDs). ULIDs are 26-character strings that are sortable by time and collision-resistant.
+  description: >-
+    ULID Generator is a tool for generating Universally Unique Lexicographically
+    Sortable Identifiers (ULIDs). ULIDs are 26-character strings that are
+    sortable by time and collision-resistant.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/ulidgenerator:
     get:
       summary: Generate ULID
-      description: ULID Generator is a tool for generating Universally Unique Lexicographically Sortable Identifiers (ULIDs). ULIDs are 26-character strings that are sortable by time and collision-resistant.
+      description: Generate one or more ULIDs
       operationId: ulidgenerator
       parameters:
-      - name: count
-        default: '1'
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Number of ULIDs to generate (1-100, default: 1)'
-        example: '5'
-      - name: timestamp
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Custom timestamp in milliseconds (optional, uses current time if not specified)
-        example: '1609459200000'
+        - name: count
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Number of ULIDs to generate
+          example: 5
+        - name: timestamp
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: >-
+            Custom timestamp in milliseconds (optional, uses current time if not
+            specified)
+          example: 1609459200000
       responses:
         '200':
           description: Successful Response
@@ -50,20 +54,20 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   ulids:
-                  - 01KA2Z6VED8Z0K58H8QXAWACCM
-                  - 01KA2Z6VEEKM8H0ZFVQDCKNSYC
-                  - 01KA2Z6VEF8PPCT566RYJNA2RE
-                  - 01KA2Z6VEG21TS44FF0892XDPQ
-                  - 01KA2Z6VEHGTSEKS3NEJBDPHRV
+                    - 01KCMMK564DMMCC17AVBZTVNT1
+                    - 01KCMMK565ZE4681DFAEWBF95G
+                    - 01KCMMK566K1REYH0JEK4Q8DKW
+                    - 01KCMMK5670W9EHFNX76R8FKWH
+                    - 01KCMMK568SFRY6DCZTZYMR66Y
                   count: 5
-                  timestamp: 1763183914445
+                  timestamp: 1765924246724
                   format: 26 characters (10 timestamp + 16 random)
                   sortable: true
                   case_insensitive: true
@@ -72,7 +76,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -80,4 +84,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
