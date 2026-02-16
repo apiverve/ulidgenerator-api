@@ -44,7 +44,10 @@ from apiverve_ulidgenerator.apiClient import UlidgeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = UlidgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1, "timestamp": 1609459200000 }
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "count": 1, "timestamp": 1609459200000 }
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
 ```
 
 ###### Simple Request
@@ -131,7 +137,10 @@ from apiverve_ulidgenerator.apiClient import UlidgeneratorAPIClient, Ulidgenerat
 
 api = UlidgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1, "timestamp": 1609459200000 }
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
 
 try:
     result = api.execute(query)
@@ -152,7 +161,10 @@ from apiverve_ulidgenerator.apiClient import UlidgeneratorAPIClient, Ulidgenerat
 
 api = UlidgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1, "timestamp": 1609459200000 }
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
 
 try:
     result = api.execute(query)
@@ -186,7 +198,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_ulidgenerator.apiClient import UlidgeneratorAPIClient, UlidgeneratorAPIClientError
 
-query = { "count": 1, "timestamp": 1609459200000 }
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
 
 # Using context manager ensures proper cleanup
 with UlidgeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -212,7 +227,10 @@ from apiverve_ulidgenerator.apiClient import UlidgeneratorAPIClient
 # Enable debug mode
 api = UlidgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "count": 1, "timestamp": 1609459200000 }
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -227,8 +245,12 @@ from apiverve_ulidgenerator.apiClient import UlidgeneratorAPIClient
 
 api = UlidgeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "count": 1,
+    "timestamp": 1609459200000
+}
+
 try:
-    query = { "count": 1, "timestamp": 1609459200000 }
     result = api.execute(query)
     print(result)
 finally:
