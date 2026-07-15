@@ -17,11 +17,14 @@ def call_ulidgenerator_api():
     Make a GET request to the ULID Generator API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;count&#x27;: 5, &#x27;timestamp&#x27;: 1609459200000}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
