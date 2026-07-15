@@ -4,21 +4,33 @@ declare module '@apiverve/ulidgenerator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface ulidgeneratorResponse {
     status: string;
     error: string | null;
     data: ULIDGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface ULIDGeneratorData {
-      ulids:           string[];
-      count:           number;
-      timestamp:       number;
-      format:          string;
-      sortable:        boolean;
-      caseInsensitive: boolean;
+      ulids:           (null | string)[];
+      count:           number | null;
+      timestamp:       number | null;
+      format:          null | string;
+      sortable:        boolean | null;
+      caseInsensitive: boolean | null;
   }
 
   export default class ulidgeneratorWrapper {
