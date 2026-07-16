@@ -25,6 +25,9 @@ namespace APIVerve.API.ULIDGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,18 +36,30 @@ namespace APIVerve.API.ULIDGenerator
         public string[] Ulids { get; set; }
 
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         [JsonProperty("timestamp")]
-        public long Timestamp { get; set; }
+        public long? Timestamp { get; set; }
 
         [JsonProperty("format")]
         public string Format { get; set; }
 
         [JsonProperty("sortable")]
-        public bool Sortable { get; set; }
+        public bool? Sortable { get; set; }
 
         [JsonProperty("case_insensitive")]
-        public bool CaseInsensitive { get; set; }
+        public bool? CaseInsensitive { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
