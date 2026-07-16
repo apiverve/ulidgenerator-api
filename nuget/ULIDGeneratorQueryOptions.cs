@@ -14,12 +14,12 @@ namespace APIVerve.API.ULIDGenerator
         /// Number of ULIDs to generate
         /// </summary>
         [JsonProperty("count")]
-        public string Count { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
         /// Custom timestamp in milliseconds (optional, uses current time if not specified)
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public int? Timestamp { get; set; }
     }
 }
