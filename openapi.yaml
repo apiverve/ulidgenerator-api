@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: ULID Generator
   description: >-
-    ULID Generator is a tool for generating Universally Unique Lexicographically
-    Sortable Identifiers (ULIDs). ULIDs are 26-character strings that are
-    sortable by time and collision-resistant.
+    ULID Generator creates Universally Unique Lexicographically Sortable
+    Identifiers that order records chronologically. Pass an optional batch count
+    and millisecond timestamp to produce 26-character collision-resistant unique
+    IDs with format details.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/ulidgenerator:
     get:
-      summary: Generate ULID
+      summary: ULID Generator
       description: Generate one or more ULIDs
       operationId: ulidgenerator
       parameters:
