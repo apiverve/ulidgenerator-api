@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/ulidgenerator",
-  "version": "1.2.0",
-  "description": "ULID Generator is a tool for generating Universally Unique Lexicographically Sortable Identifiers (ULIDs). ULIDs are 26-character strings that are sortable by time and collision-resistant.",
+  "version": "1.2.2",
+  "description": "ULID Generator creates Universally Unique Lexicographically Sortable Identifiers that order records chronologically. Pass an optional batch count and millisecond timestamp to produce 26-character collision-resistant unique IDs with format details.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "ulid", "unique id", "sortable id", "identifier generator", "ulid generator"
+    "ulid generator", "ulid", "generate ulid", "ulid api", "ulid generator api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/ulidgenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/ulidgenerator?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/ulidgenerator?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
