@@ -1,13 +1,12 @@
 ULID Generator API
 ============
 
-ULID Generator is a tool for generating Universally Unique Lexicographically Sortable Identifiers (ULIDs). ULIDs are 26-character strings that are sortable by time and collision-resistant.
+ULID Generator creates Universally Unique Lexicographically Sortable Identifiers that order records chronologically. Pass an optional batch count and millisecond timestamp to produce 26-character collision-resistant unique IDs with format details.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [ULID Generator API](https://apiverve.com/marketplace/ulidgenerator?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-ulidgenerator.svg)](https://pypi.org/project/apiverve-ulidgenerator/)
+
+This is a Python wrapper for the [ULID Generator API](https://apiverve.com/marketplace/ulidgenerator?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-ulidgenerator
 
 ## Configuration
 
-Before using the ulidgenerator API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the ULID Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The ULID Generator API documentation is found here: [https://docs.apiverve.com/ref/ulidgenerator](https://docs.apiverve.com/ref/ulidgenerator?utm_source=pypi&utm_medium=readme).
+The ULID Generator API documentation is found here: [https://docs.apiverve.com/ref/ulidgenerator](https://docs.apiverve.com/ref/ulidgenerator?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -109,14 +108,14 @@ print(result)
   "error": null,
   "data": {
     "ulids": [
-      "01KA2Z6VED8Z0K58H8QXAWACCM",
-      "01KA2Z6VEEKM8H0ZFVQDCKNSYC",
-      "01KA2Z6VEF8PPCT566RYJNA2RE",
-      "01KA2Z6VEG21TS44FF0892XDPQ",
-      "01KA2Z6VEHGTSEKS3NEJBDPHRV"
+      "01KCMMK564DMMCC17AVBZTVNT1",
+      "01KCMMK565ZE4681DFAEWBF95G",
+      "01KCMMK566K1REYH0JEK4Q8DKW",
+      "01KCMMK5670W9EHFNX76R8FKWH",
+      "01KCMMK568SFRY6DCZTZYMR66Y"
     ],
     "count": 5,
-    "timestamp": 1763183914445,
+    "timestamp": 1765924246724,
     "format": "26 characters (10 timestamp + 16 random)",
     "sortable": true,
     "case_insensitive": true
@@ -262,7 +261,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -273,12 +272,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
